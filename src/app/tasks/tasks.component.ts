@@ -1,13 +1,13 @@
 import {
   Component,
   inject,
-  input,
+  input
 } from '@angular/core';
 import { ResolveFn, RouterLink } from '@angular/router';
 
 import { TaskComponent } from './task/task.component';
-import { TasksService } from './tasks.service';
 import { Task } from './task/task.model';
+import { TasksService } from './tasks.service';
 
 @Component({
   selector: 'app-tasks',
@@ -42,3 +42,4 @@ export const resolveUserTasks: ResolveFn<Task[]> = (
 
   return tasks.length ? tasks : [];
 };
+

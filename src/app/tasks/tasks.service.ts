@@ -2,7 +2,10 @@ import { Injectable, signal } from '@angular/core';
 
 import { type NewTaskData } from './task/task.model';
 
-@Injectable({ providedIn: 'root' })
+@Injectable(
+  // removing providedIn: 'root' from here to make it lazy loadable
+  // { providedIn: 'root' }
+)
 export class TasksService {
   private tasks = signal([
     {
